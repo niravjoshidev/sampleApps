@@ -1,12 +1,18 @@
 <div fxLayoutAlign="center center" fxFlexFill class="maindiv">
   <mat-card fxFlex="25">
       <mat-toolbar color="primary">Login Page</mat-toolbar>
-        <form fxLayoutAlign="stretch" fxLayout="column" class="login-form"> 
+        <form fxLayoutAlign="stretch" fxLayout="column" class="login-form">
             <mat-form-field>
-              <input matInput placeholder="Username">
+              <input matInput placeholder="Username"> 
+              <!-- <mat-error *ngIf="userNameFormControl.hasError('required')">
+                username is <strong>required</strong>
+              </mat-error> -->
             </mat-form-field>
             <mat-form-field>
                 <input matInput type="password" placeholder="Password">
+                <!-- <mat-error *ngIf="passwordFormControl.hasError('required')">
+                  password is <strong>required</strong>
+                </mat-error> -->
               </mat-form-field>
               <button mat-raised-button type="submit">Login</button>
           </form>
