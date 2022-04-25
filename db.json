@@ -1,4 +1,10 @@
 {
+  "users": [
+    {
+      "username": "james",
+      "password": "james123"
+    }
+  ],
   "productList": [
     {
       "productName": "Sony",
@@ -26,6 +32,15 @@
       "comments": "gdfgdfgd",
       "date": "2022-04-25T18:30:00.000Z",
       "id": 4
+    },
+    {
+      "productName": "cvxvvcvcvx",
+      "category": "Vegetables",
+      "freshness": "Brand List",
+      "price": 23,
+      "comments": "cxzcz",
+      "date": "2022-04-19T18:30:00.000Z",
+      "id": 5
     }
   ],
   "comments": [
