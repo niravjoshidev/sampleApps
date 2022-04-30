@@ -1,0 +1,12 @@
+.maindiv {
+    background-image: url("../../../content/images/notfound.jpg");
+    background-size: 100%; 
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+}
+
+.btnLogin{
+    margin-left: 115px;
+    margin-top: 491px !important;
+}

@@ -12,7 +12,7 @@ const routes: Routes = [
   {
     path:'',redirectTo:'/login',pathMatch:"full"},
   { 
-      path:'dashboard',
+      path:'Home',
       canActivate:[AuthGuard],
       loadChildren: () =>import('./modules/user/user.module')
         .then((m)=>m.UserModule)

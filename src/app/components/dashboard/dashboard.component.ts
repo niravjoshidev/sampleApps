@@ -3,8 +3,10 @@ import {MatDialog} from '@angular/material/dialog';
 import { DialogComponent } from '../../dialog/dialog.component';
 import { ApiService } from '../../services/api.service';
 import {MatPaginator} from '@angular/material/paginator';
+import { MatSidenav} from '@angular/material/sidenav'
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -27,6 +29,8 @@ export class DashboardComponent implements OnInit {
   {
     this.getAllProducts()
   }
+
+  
   openDialog() {
     const dialogRef = this.dialog.open(DialogComponent,{
       width:"30%"

@@ -15,3 +15,9 @@
   .login-form{
     padding: 20px;
   }
+  .maindiv {
+    height: 650 px;
+    background-image: url("../../content/images/ljrBvi.jpg");
+    background-size: 100%; 
+    background-size: cover;
+}

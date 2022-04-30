@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -25,6 +25,11 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+
+
+import {MatDividerModule} from '@angular/material/divider';
+import { UserLayoutComponent } from './components/user-layout/user-layout.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +37,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     LoginComponent,
     DialogComponent,
     NotFoundComponent,
-    DashboardComponent
+    DashboardComponent,
+    UserLayoutComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,7 +61,12 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     HttpClientModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatSidenavModule,
+    MatDividerModule
+  ],
+  schemas:[
+    CUSTOM_ELEMENTS_SCHEMA
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,19 +4,11 @@
         <form fxLayoutAlign="stretch" fxLayout="column" class="login-form" [formGroup]="loginForm">
             <mat-form-field>
               <input matInput formControlName="userName" placeholder="Username"> 
-              <!-- <mat-error *ngIf="userNameFormControl.hasError('required')">
-                username is <strong>required</strong>
-              </mat-error> -->
             </mat-form-field>
             <mat-form-field>
                 <input matInput formControlName="password" type="password" placeholder="Password">
-                <!-- <mat-error *ngIf="passwordFormControl.hasError('required')">
-                  password is <strong>required</strong>
-                </mat-error> -->
               </mat-form-field>
               <button mat-raised-button (click)="ValidateUser()">Login</button>
           </form>
-          
     </mat-card>
-
 </div>

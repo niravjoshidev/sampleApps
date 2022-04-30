@@ -25,7 +25,7 @@ constructor(private formBuilder:FormBuilder,private api:ApiService, private rout
 }
   ngOnInit(): void {
     if(this.api.isLoggedIn()){
-      this.router.navigate(["dashboard"])
+      this.router.navigate(["Home"])
     }
 
     this.loginForm = this.formBuilder.group({
@@ -43,7 +43,7 @@ constructor(private formBuilder:FormBuilder,private api:ApiService, private rout
           if(ref.length > 0){
             console.warn('login success!!')
             this.api.setToken('abcdefghijklmnopqrstuvwxyz');
-            this.router.navigate(['dashboard'])
+            this.router.navigate(['Home'])
           }
           else{
             console.warn('failed')

@@ -1,14 +1,15 @@
-<mat-toolbar color="primary">
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>supervised_user_circle</mat-icon>
-    </button>
-    <span>Sample Angular App</span>
-    <span class="example-spacer"></span>
-    <button mat-raised-button (click)="openDialog()">Add Product</button>
-    <button mat-raised-button color="warn" (click)="logOut()" style="margin-left: 5px;">Log out</button>
-  </mat-toolbar>
-<div class="container">
-  <div style="margin-top: 10px;">
+
+<div fxLayoutAlign="start center" fxFlexFill class="container">
+  <div style="margin-top: 10px;    width: 1200px;">
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <span>Product List</span>
+        <span class="example-spacer"></span>
+        <button mat-raised-button color="warn" (click)="openDialog()">
+          Add Product
+        </button>
+      </mat-toolbar-row>
+      </mat-toolbar> 
     <mat-form-field appearance="standard">
       <mat-label>Filter</mat-label>
       <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
@@ -75,5 +76,5 @@
       <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
     </div>
   </div>
-</div>
+
 
