@@ -6,12 +6,13 @@
     <mat-sidenav-container>
         <mat-sidenav class="mat-elevation-z8">
             <img class="avatar mat-elevation-z8" src="https://source.unsplash.com/c_GmwfHBDzk/200x200" />
+            <!-- <img class="avatar mat-elevation-z8" src="../../../content/images/user-icon.jpg" /> -->
 
-            <h4 class="name">John Smith</h4>
+            <h4 class="name">Nirav Joshi</h4>
             <p class="designation">Software Engineer</p>
 
             <mat-divider></mat-divider>
-            <button mat-button class="menu-button" [routerLink]="'/products'">
+            <button mat-button class="menu-button" [routerLink]="'/Home/products'">
                 <mat-icon>home</mat-icon>
                 <span>Products</span>
             </button>
@@ -33,7 +34,7 @@
         </mat-sidenav>
         <mat-sidenav-content>
             <div class="content mat-elevation-z8">
-                <app-dashboard></app-dashboard>
+                <router-outlet></router-outlet>
             </div>
         </mat-sidenav-content>
     </mat-sidenav-container>

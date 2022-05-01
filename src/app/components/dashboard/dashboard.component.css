@@ -10,7 +10,9 @@
     font-size: 14px;
     width: 100%;
   }
-  
+  .mat-toolbar{
+    background-color: #002b5c;
+}
   /* .container{
     max-width: 1200px;
     margin: 0 auto;

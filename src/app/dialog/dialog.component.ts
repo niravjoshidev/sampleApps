@@ -3,6 +3,7 @@ import { FormGroup,FormBuilder,Validator, Validators } from '@angular/forms';
 import { ApiService } from '../services/api.service';
 import { MatDialogRef,MAT_DIALOG_DATA} from '@angular/material/dialog'
 import { inject } from '@angular/core/testing';
+import { NotificationService } from '../services/common/notification.service';
 
 @Component({
   selector: 'app-dialog',
@@ -17,7 +18,8 @@ export class DialogComponent implements OnInit {
   constructor(private formBuilder : FormBuilder,
     private api:ApiService,
     @Inject(MAT_DIALOG_DATA) public editData:any,
-    private dialogRef:MatDialogRef<DialogComponent>) 
+    private dialogRef:MatDialogRef<DialogComponent>,
+    private notif:NotificationService) 
   { 
     
   }
@@ -51,12 +53,12 @@ export class DialogComponent implements OnInit {
       if(this.productForm.valid){
         this.api.postProduct(this.productForm.value).subscribe({
           next:(res)=>{
-            alert('Record inserted successfully');
+            this.notif.success('Record inserted successfully')
             this.productForm.reset();
             this.dialogRef.close('Save');
           },
           error:()=>{
-             alert("Error while adding records");
+            this.notif.warn("Error while adding records");
           }
         });
         console.log(this.productForm.value);
@@ -64,12 +66,12 @@ export class DialogComponent implements OnInit {
     }else{
       this.api.putProduct(this.productForm.value,this.editData.id).subscribe({
         next:(res)=>{
-          alert('Record updated successfully');
+          this.notif.success('Record updated successfully');
           this.productForm.reset();
           this.dialogRef.close('Update');
         },
         error:()=>{
-          alert("Error while updating records");
+          this.notif.warn("Error while updating records");
         }
       })
     }

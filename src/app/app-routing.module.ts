@@ -1,5 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { AuthGuard } from './guards/auth.guard';
 import { LoginComponent } from './login/login.component';
@@ -14,8 +15,7 @@ const routes: Routes = [
   { 
       path:'Home',
       canActivate:[AuthGuard],
-      loadChildren: () =>import('./modules/user/user.module')
-        .then((m)=>m.UserModule)
+      loadChildren: () =>import('./modules/user/user.module').then((m)=>m.UserModule)
   },
   {
     path:'**',component:NotFoundComponent

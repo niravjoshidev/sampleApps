@@ -2,15 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup,FormBuilder,Validator, Validators, RequiredValidator } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { ApiService } from '../services/api.service';
-// import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
-// import {ErrorStateMatcher} from '@angular/material/core';
+import { NotificationService } from '../services/common/notification.service';
 
-// export class MyErrorStateMatcher implements ErrorStateMatcher {
-//   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
-//     const isSubmitted = form && form.submitted;
-//     return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
-//   }
-// }
 
 @Component({
   selector: 'app-login',
@@ -20,7 +13,12 @@ import { ApiService } from '../services/api.service';
 export class LoginComponent implements OnInit{
 
   loginForm !: FormGroup;
-constructor(private formBuilder:FormBuilder,private api:ApiService, private router:Router){
+  
+
+constructor(private formBuilder:FormBuilder,
+    private api:ApiService, 
+    private router:Router,
+    private notif:NotificationService){
 
 }
   ngOnInit(): void {
@@ -46,7 +44,7 @@ constructor(private formBuilder:FormBuilder,private api:ApiService, private rout
             this.router.navigate(['Home'])
           }
           else{
-            console.warn('failed')
+           this.notif.error('username or password invalid');
           }
         }
       })

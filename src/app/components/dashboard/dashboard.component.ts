@@ -6,6 +6,8 @@ import {MatPaginator} from '@angular/material/paginator';
 import { MatSidenav} from '@angular/material/sidenav'
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
+import { ConfirmDialogService } from 'src/app/services/common/confirm-dialog.service';
+import { NotificationService } from 'src/app/services/common/notification.service';
 
 
 @Component({
@@ -21,7 +23,10 @@ export class DashboardComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(private dialog:MatDialog,private api:ApiService){
+  constructor(private dialog:MatDialog,
+    private api:ApiService,
+    private confirmDialog:ConfirmDialogService,
+    private notif:NotificationService){
 
   }
 
@@ -48,7 +53,7 @@ export class DashboardComponent implements OnInit {
           this.dataSource.sort =this.sort;
         },
         error:()=>{
-          console.log('error getting while fetching data')
+          this.notif.warn('error getting while fetching data')
         }
       })
   }
@@ -73,15 +78,21 @@ export class DashboardComponent implements OnInit {
   }
 
   deleteProduct(id:number){
-    this.api.deleteProduct(id).subscribe({
-      next:(res)=>{
-        alert('Record delete successfully');
-        this.getAllProducts();
-      },
-      error:()=>{
-        alert("Error while deleting records");
-     }
-    })
+    this.confirmDialog.openConfirmDialog("Are you sure you want to delete record ?")
+    .afterClosed()
+    .subscribe((ref) =>{
+      if(ref){
+        this.api.deleteProduct(id).subscribe({
+          next:(res)=>{
+            this.notif.success('Record delete successfully')
+            this.getAllProducts();
+          },
+          error:()=>{
+            this.notif.warn('Error while deleting records')
+        }
+      })
+      }
+    });
   }
   logOut(){
     this.api.logout()

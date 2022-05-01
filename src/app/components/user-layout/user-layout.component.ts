@@ -9,7 +9,7 @@ import { ApiService } from 'src/app/services/api.service';
   styleUrls: ['./user-layout.component.css']
 })
 export class UserLayoutComponent implements OnInit {
-
+  
   @ViewChild(MatSidenav) sidenav!: MatSidenav;
   constructor(private observer:BreakpointObserver,private service:ApiService) { }
 

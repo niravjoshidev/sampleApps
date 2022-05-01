@@ -4,8 +4,14 @@ import { DashboardComponent } from 'src/app/components/dashboard/dashboard.compo
 import { UserLayoutComponent } from 'src/app/components/user-layout/user-layout.component';
 
 const routes: Routes = [
-  {path:'',component:UserLayoutComponent},
-  {path:'products',component:DashboardComponent}
+  {
+    path:'',component:UserLayoutComponent,children:
+    [
+      {
+        path:'products',component:DashboardComponent
+      }
+    ]
+  }
 ];
 
 @NgModule({

@@ -26,10 +26,12 @@ import {MatSortModule} from '@angular/material/sort';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatSnackBarModule } from '@angular/material/snack-bar'
 
 
 import {MatDividerModule} from '@angular/material/divider';
 import { UserLayoutComponent } from './components/user-layout/user-layout.component';
+import { ConfirmDialogComponent } from './components/common/confirm-dialog/confirm-dialog.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,7 @@ import { UserLayoutComponent } from './components/user-layout/user-layout.compon
     NotFoundComponent,
     DashboardComponent,
     UserLayoutComponent,
+    ConfirmDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,7 +66,8 @@ import { UserLayoutComponent } from './components/user-layout/user-layout.compon
     MatPaginatorModule,
     MatSortModule,
     MatSidenavModule,
-    MatDividerModule
+    MatDividerModule,
+    MatSnackBarModule
   ],
   schemas:[
     CUSTOM_ELEMENTS_SCHEMA
