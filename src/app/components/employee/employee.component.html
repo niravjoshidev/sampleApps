@@ -1,0 +1,205 @@
+<div class="main-panel">
+    <mat-toolbar color="primary">
+        <mat-toolbar-row>
+            <span>Employee Form</span>
+            <span class="example-spacer"></span>
+        </mat-toolbar-row>
+    </mat-toolbar>
+    <div class="container" fxLayout="column" fxLayout.md="row" fxLayoutGap="20px">
+        <div fxLayout.lt-md="column" fxLayout.md="column"  fxLayout="row" fxFlex.md="50" fxLayoutAligmnet="space-between center" fxLayoutGap="20px" >  
+            <div fxFlex.lt-md="100" fxFlex="50" >
+                <mat-form-field appearance="outline">
+                    <mat-label>Employee First Name</mat-label>
+                    <input matInput placeholder="First Name">
+                  </mat-form-field>
+                  <mat-form-field appearance="outline">
+                    <mat-label>Employee Middle Name</mat-label>
+                    <input matInput placeholder="Middle Name">
+                  </mat-form-field>
+                  <mat-form-field appearance="outline">
+                    <mat-label>Employee Last Name</mat-label>
+                    <input matInput placeholder="Last Name">
+                  </mat-form-field>
+                  <mat-form-field appearance="outline">
+                    <mat-label>Date Of Birth</mat-label>
+                    <input matInput [matDatepicker]="picker">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+                    <label for="">
+                        <h4>Gneder</h4>
+                    </label>
+                    <mat-radio-group class="example-radio-group">
+                        <mat-radio-button class="example-radio-button" *ngFor="let gender of genderList" [value]="gender">
+                            {{gender}}
+                        </mat-radio-button>
+                    </mat-radio-group>
+            </div>  
+            <div fxFlex.lt-md="100" fxFlex="50" >
+                <mat-form-field appearance="outline">
+                    <mat-label>City</mat-label>
+                    <mat-select placeholder="City">
+                      <mat-option *ngFor="let city of cityList" [value]="city">
+                        {{city}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                  <mat-form-field appearance="outline">
+                    <mat-label>Enter your email</mat-label>
+                    <input matInput placeholder="pat@example.com">
+                  </mat-form-field>
+                  <mat-form-field appearance="outline">
+                    <mat-label>Department</mat-label>
+                    <mat-select placeholder="Department">
+                      <mat-option *ngFor="let department of departmentList" [value]="department">
+                        {{department}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                 <mat-checkbox>Is Permament</mat-checkbox>
+                 
+                  <!-- <mat-form-field appearance="outline">
+                    <mat-label>Phone number</mat-label>
+                    <example-tel-input></example-tel-input>
+                    <mat-icon matSuffix>phone</mat-icon>
+                    <mat-hint>Include area code</mat-hint>
+                  </mat-form-field> -->
+            </div>  
+          </div> 
+          <section>
+            <div class="example-button-row">
+              <button mat-raised-button color="primary">Ok</button>
+              <button mat-raised-button color="warn">Cancel</button>
+            </div>
+          </section> 
+    </div>
+</div>
+
+ <!-- <div fxFlexFill>
+            <mat-form-field appearance="outline">
+                <mat-label>input 1</mat-label>
+                <input matInput placeholder="Product Name">
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <mat-label>input 2</mat-label>
+                <input matInput placeholder="Product Name">
+              </mat-form-field>
+        </div> -->
+        <!-- <div fxFlexOrder="2">
+                <mat-form-field appearance="outline">
+                    <mat-label>input 1</mat-label>
+                    <input matInput placeholder="Product Name">
+                  </mat-form-field>
+                  <mat-form-field appearance="outline">
+                    <mat-label>input 2</mat-label>
+                    <input matInput placeholder="Product Name">
+                  </mat-form-field>
+        </div>   -->
+        <!-- <div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="10px">  
+            <div fxFlex="30">
+                <mat-form-field appearance="outline">
+                    <mat-label>input 1</mat-label>
+                    <input matInput placeholder="Product Name">
+                  </mat-form-field>
+            </div>  
+            <div fxFlex="30">
+                <mat-form-field appearance="outline">
+                    <mat-label>input 2</mat-label>
+                    <input matInput placeholder="Product Name">
+                  </mat-form-field>
+            </div>  
+            <div fxFlex="30">
+                <mat-form-field appearance="outline">
+                    <mat-label>input 2</mat-label>
+                    <input matInput placeholder="Product Name">
+                  </mat-form-field>
+            </div>  
+            <div fxFlex="30">
+                <mat-form-field appearance="outline">
+                    <mat-label>input 2</mat-label>
+                    <input matInput placeholder="Product Name">
+                  </mat-form-field>
+            </div>  
+            <div fxFlex="30">
+                <mat-form-field appearance="outline">
+                    <mat-label>input 2</mat-label>
+                    <input matInput placeholder="Product Name">
+                  </mat-form-field>
+            </div>  
+            </div>   -->
+        <!-- <div fxlayout="row" fxLayoutAlign="center start" fxLayoutGap="20px"> 
+            <div class="sub-section-1">
+                <mat-form-field appearance="outline">
+                    <mat-label>input 1</mat-label>
+                    <input matInput placeholder="Product Name">
+                  </mat-form-field>
+            </div>  
+            <div class="sub-section-2">
+                <mat-form-field appearance="outline">
+                    <mat-label>input 2</mat-label>
+                    <input matInput placeholder="Product Name">
+                  </mat-form-field>
+            </div>  
+            <div class="sub-section-2">
+                <mat-form-field appearance="outline">
+                    <mat-label>input 3</mat-label>
+                    <input matInput placeholder="Product Name">
+                  </mat-form-field>
+            </div>  
+        </div> -->
+        <!-- <div fxLayout="column" fxLayout.md="row" fxLayoutGap="20px">  
+            <div class="cardWrap" fxLayout.lt-md="column" fxLayout.md="column"  fxLayout="row" fxFlex.md="50" fxLayoutAligmnet="space-between center" fxLayoutGap="20px" >  
+            <div fxFlex.lt-md="100" fxFlex="35" >Card</div>  
+            <div fxFlex.lt-md="100" fxFlex="35" >Card</div>  
+            <div fxFlex.lt-md="100" fxFlex="35" >Card</div>  
+          </div>  
+          <div class="cardWrap" fxLayout.lt-md="column" fxLayout.md="column" fxLayout="row" fxFlex.md="50" fxLayoutAligmnet="space-between center" fxLayoutGap="20px" >  
+          <div fxFlex.lt-md="100" fxFlex="35" >Card</div>  
+          <div fxFlex.lt-md="100" fxFlex="35" >Card</div>  
+          <div fxFlex.lt-md="100" fxFlex="35" >Card</div>  
+          </div>  
+         </div>   -->
+
+         <!-- <div fxLayout="column" fxLayoutAlign="end center">  
+            <div class="child-1">
+                <mat-form-field appearance="outline">
+                    <mat-label>input 1</mat-label>
+                    <input matInput placeholder="Product Name">
+                  </mat-form-field>
+            </div>
+            <div class="child-1">
+                <mat-form-field appearance="outline">
+                    <mat-label>input 3</mat-label>
+                    <input matInput placeholder="Product Name">
+                  </mat-form-field>
+            </div>    
+            <div class="child-2">
+                <mat-form-field appearance="outline">
+                    <mat-label>input 2</mat-label>
+                    <input matInput placeholder="Product Name">
+                  </mat-form-field>
+            </div>  
+          </div>   -->
+
+          <!-- <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="20px">  
+            <div fxFlex="50">  
+                <mat-form-field appearance="outline">
+                <mat-label>input 1</mat-label>
+                <input matInput placeholder="Product Name">
+              </mat-form-field> 
+            </div>  
+            <div fxFlex="50" fxHide.lt-md>  
+                <mat-form-field appearance="outline">
+                <mat-label>input 2</mat-label>
+                <input matInput placeholder="Product Name">
+              </mat-form-field>
+             </div>  
+            <div fxFlex="35" fxLayoutAlign="space-around center">  
+                <div fxFlex="50" fxFlex.lt-lg="80">  
+                    <mat-form-field appearance="outline">
+                    <mat-label>input 1-1</mat-label>
+                    <input matInput placeholder="Product Name">
+                </mat-form-field>
+                </div>  
+            </div>  
+           </div>  -->

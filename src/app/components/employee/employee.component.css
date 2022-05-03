@@ -1,0 +1,45 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .main-panel{
+      width: 1200px;
+  }
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+    color: black;
+  }
+  .mat-toolbar{
+    background-color: #002b5c;
+    margin-bottom: 5px;
+}
+.example-radio-group {
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0;
+    align-items: flex-start;
+    font-size: 14px;
+    color: black;
+  }
+  
+  .example-radio-button {
+    margin: 5px;
+  }
+  label h4{
+color: black;
+  }
+.container .cardWrap div{  
+height: 200px;  
+border:2px solid gray;  
+}  
+.mat-checkbox{
+    font-size: 14px;
+    color: black;
+}
+.example-button-row{
+    float: right;
+}
+.example-button-row button{
+    margin-left: 5px;
+}
