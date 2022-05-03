@@ -5,20 +5,21 @@
       "password": "james123"
     }
   ],
+  "EmployeeList": [],
   "productList": [
     {
-      "productName": "cxvxcvxc",
+      "productName": "xcvx",
       "category": "Vegetables",
       "freshness": "Brand List",
       "price": 324,
       "comments": "rterter",
-      "date": "2022-04-25T18:30:00.000Z",
+      "date": "2022-04-27T18:30:00.000Z",
       "id": 6
     },
     {
       "productName": " fbcfbvc",
       "category": "Vegetables",
-      "freshness": "second Hand",
+      "freshness": "Refurnished",
       "price": 453435,
       "comments": "fgdgdfgd",
       "date": "2022-05-09T18:30:00.000Z",
@@ -50,6 +51,15 @@
       "comments": "yrtyrt",
       "date": "2022-05-09T18:30:00.000Z",
       "id": 10
+    },
+    {
+      "productName": "cxvxcvx",
+      "category": "Vegetables",
+      "freshness": "Brand List",
+      "price": 434,
+      "comments": "rtretgert",
+      "date": "2022-05-16T18:30:00.000Z",
+      "id": 11
     }
   ],
   "comments": [

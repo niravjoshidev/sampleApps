@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from 'src/app/components/dashboard/dashboard.component';
+import { EmployeeComponent } from 'src/app/components/employee/employee.component';
 import { UserLayoutComponent } from 'src/app/components/user-layout/user-layout.component';
 
 const routes: Routes = [
@@ -9,6 +10,9 @@ const routes: Routes = [
     [
       {
         path:'products',component:DashboardComponent
+      },
+      {
+        path:'employee/create',component:EmployeeComponent
       }
     ]
   }

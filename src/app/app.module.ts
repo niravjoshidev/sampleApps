@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
@@ -13,25 +14,28 @@ import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDialogModule} from '@angular/material/dialog';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { DialogComponent } from './dialog/dialog.component'
 import {MatSelectModule} from '@angular/material/select';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core'
 import {MatRadioModule} from '@angular/material/radio';
-import { HttpClientModule } from '@angular/common/http';
+import {MatCheckboxModule} from '@angular/material/checkbox'
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
+import {MatSnackBarModule } from '@angular/material/snack-bar'
+import {MatDividerModule} from '@angular/material/divider';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { NgxUiLoaderHttpModule, NgxUiLoaderModule } from 'ngx-ui-loader';
+
+import { DialogComponent } from './dialog/dialog.component'
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatSnackBarModule } from '@angular/material/snack-bar'
-
-
-import {MatDividerModule} from '@angular/material/divider';
 import { UserLayoutComponent } from './components/user-layout/user-layout.component';
 import { ConfirmDialogComponent } from './components/common/confirm-dialog/confirm-dialog.component';
+import { EmployeeComponent } from './components/employee/employee.component';
+
 
 @NgModule({
   declarations: [
@@ -42,12 +46,15 @@ import { ConfirmDialogComponent } from './components/common/confirm-dialog/confi
     DashboardComponent,
     UserLayoutComponent,
     ConfirmDialogComponent,
+    EmployeeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    //for using flex design
     FlexLayoutModule,
+    //for using material UI controls
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
@@ -67,7 +74,14 @@ import { ConfirmDialogComponent } from './components/common/confirm-dialog/confi
     MatSortModule,
     MatSidenavModule,
     MatDividerModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatCheckboxModule,
+    //for Loader
+    NgxUiLoaderModule,
+    // automatically set for all HTTP request
+    NgxUiLoaderHttpModule.forRoot({
+      showForeground:true
+    })
   ],
   schemas:[
     CUSTOM_ELEMENTS_SCHEMA
