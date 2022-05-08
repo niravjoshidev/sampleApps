@@ -28,6 +28,9 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxUiLoaderHttpModule, NgxUiLoaderModule } from 'ngx-ui-loader';
+// import {AngualrFiremodule} from '@angular/fire'
+import {AngularFireModule} from '@angular/fire/compat'
+import {AngularFireDatabaseModule} from '@angular/fire/compat/database'
 
 import { DialogComponent } from './dialog/dialog.component'
 import { NotFoundComponent } from './components/not-found/not-found.component';
@@ -35,6 +38,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { UserLayoutComponent } from './components/user-layout/user-layout.component';
 import { ConfirmDialogComponent } from './components/common/confirm-dialog/confirm-dialog.component';
 import { EmployeeComponent } from './components/employee/employee.component';
+import { EmployeeListComponent } from './components/employee-list/employee-list.component';
+import { environment } from 'src/environments/environment';
 
 
 @NgModule({
@@ -47,6 +52,7 @@ import { EmployeeComponent } from './components/employee/employee.component';
     UserLayoutComponent,
     ConfirmDialogComponent,
     EmployeeComponent,
+    EmployeeListComponent,
   ],
   imports: [
     BrowserModule,
@@ -81,7 +87,9 @@ import { EmployeeComponent } from './components/employee/employee.component';
     // automatically set for all HTTP request
     NgxUiLoaderHttpModule.forRoot({
       showForeground:true
-    })
+    }),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule
   ],
   schemas:[
     CUSTOM_ELEMENTS_SCHEMA

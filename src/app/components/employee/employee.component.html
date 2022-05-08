@@ -1,78 +1,75 @@
 <div class="main-panel">
-    <mat-toolbar color="primary">
-        <mat-toolbar-row>
-            <span>Employee Form</span>
-            <span class="example-spacer"></span>
-        </mat-toolbar-row>
-    </mat-toolbar>
-    <div class="container" fxLayout="column" fxLayout.md="row" fxLayoutGap="20px">
-        <div fxLayout.lt-md="column" fxLayout.md="column"  fxLayout="row" fxFlex.md="50" fxLayoutAligmnet="space-between center" fxLayoutGap="20px" >  
-            <div fxFlex.lt-md="100" fxFlex="50" >
-                <mat-form-field appearance="outline">
-                    <mat-label>Employee First Name</mat-label>
-                    <input matInput placeholder="First Name">
-                  </mat-form-field>
-                  <mat-form-field appearance="outline">
-                    <mat-label>Employee Middle Name</mat-label>
-                    <input matInput placeholder="Middle Name">
-                  </mat-form-field>
-                  <mat-form-field appearance="outline">
-                    <mat-label>Employee Last Name</mat-label>
-                    <input matInput placeholder="Last Name">
-                  </mat-form-field>
-                  <mat-form-field appearance="outline">
-                    <mat-label>Date Of Birth</mat-label>
-                    <input matInput [matDatepicker]="picker">
-                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                    <mat-datepicker #picker></mat-datepicker>
-                  </mat-form-field>
-                    <label for="">
-                        <h4>Gneder</h4>
-                    </label>
-                    <mat-radio-group class="example-radio-group">
-                        <mat-radio-button class="example-radio-button" *ngFor="let gender of genderList" [value]="gender">
-                            {{gender}}
-                        </mat-radio-button>
-                    </mat-radio-group>
-            </div>  
-            <div fxFlex.lt-md="100" fxFlex="50" >
-                <mat-form-field appearance="outline">
-                    <mat-label>City</mat-label>
-                    <mat-select placeholder="City">
-                      <mat-option *ngFor="let city of cityList" [value]="city">
-                        {{city}}
-                      </mat-option>
-                    </mat-select>
-                  </mat-form-field>
-                  <mat-form-field appearance="outline">
-                    <mat-label>Enter your email</mat-label>
-                    <input matInput placeholder="pat@example.com">
-                  </mat-form-field>
-                  <mat-form-field appearance="outline">
-                    <mat-label>Department</mat-label>
-                    <mat-select placeholder="Department">
-                      <mat-option *ngFor="let department of departmentList" [value]="department">
-                        {{department}}
-                      </mat-option>
-                    </mat-select>
-                  </mat-form-field>
-                 <mat-checkbox>Is Permament</mat-checkbox>
-                 
-                  <!-- <mat-form-field appearance="outline">
-                    <mat-label>Phone number</mat-label>
-                    <example-tel-input></example-tel-input>
-                    <mat-icon matSuffix>phone</mat-icon>
-                    <mat-hint>Include area code</mat-hint>
-                  </mat-form-field> -->
-            </div>  
-          </div> 
-          <section>
-            <div class="example-button-row">
-              <button mat-raised-button color="primary">Ok</button>
-              <button mat-raised-button color="warn">Cancel</button>
-            </div>
-          </section> 
-    </div>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>Employee Form</span>
+      <span class="example-spacer"></span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <div class="container" fxLayout="column" fxLayout.md="row" fxLayoutGap="20px">
+    <form action="" [formGroup]="EmployeeForm">
+      <input type="hidden" formControlName="key">
+      <div fxLayout.lt-md="column" fxLayout.md="column" fxLayout="row" fxFlex.md="50"
+        fxLayoutAligmnet="space-between center" fxLayoutGap="20px">
+        <div fxFlex.lt-md="100" fxFlex="50">
+          <mat-form-field appearance="outline">
+            <mat-label>Employee First Name</mat-label>
+            <input matInput placeholder="First Name" formControlName="EmpFirstName">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Employee Middle Name</mat-label>
+            <input matInput placeholder="Middle Name" formControlName="EmpMiddleName">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Employee Last Name</mat-label>
+            <input matInput placeholder="Last Name" formControlName="EmpLastName">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Date Of Birth</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="EmpDateOfBirth">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+          <label for="">
+            <h4>Gneder</h4>
+          </label>
+          <mat-radio-group class="example-radio-group" formControlName="EmpGender">
+            <mat-radio-button class="example-radio-button" *ngFor="let gender of genderList" [value]="gender">
+              {{gender}}
+            </mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <div fxFlex.lt-md="100" fxFlex="50">
+          <mat-form-field appearance="outline">
+            <mat-label>City</mat-label>
+            <mat-select placeholder="City" formControlName="EmpCity">
+              <mat-option *ngFor="let city of cityList" [value]="city">
+                {{city}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Enter your email</mat-label>
+            <input matInput placeholder="pat@example.com" formControlName="EmpEmail">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Department</mat-label>
+            <mat-select placeholder="Department" formControlName="EmpDepartment">
+              <mat-option *ngFor="let department of departmentList" [value]="department">
+                {{department}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-checkbox formControlName="EmpIsPermantnt">Is Permament</mat-checkbox>
+        </div>
+      </div>
+    </form>
+    <section>
+      <div class="example-button-row">
+        <button mat-raised-button color="primary" (click)="AddEmployee()">{{btnSaveCaption}}</button>
+        <button mat-raised-button color="warn" (click)="CancelForm()">Cancel</button>
+      </div>
+    </section>
+  </div>
 </div>
 
  <!-- <div fxFlexFill>
