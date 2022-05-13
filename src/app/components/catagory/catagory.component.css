@@ -1,0 +1,33 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .main-panel{
+      width: 1200px;
+  }
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+    color: black;
+  }
+  .mat-toolbar{
+    background-color: #002b5c;
+    margin-bottom: 5px;
+}
+.example-card {
+    max-width: 350px;
+    margin-left: 5px;
+    margin-top: 1rem;
+  }
+  
+  .example-header-image {
+        background-size: cover;
+  }
+
+  .card-wrapper{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+  }
+

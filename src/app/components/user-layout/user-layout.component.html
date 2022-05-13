@@ -6,7 +6,7 @@
     <mat-sidenav-container>
         <mat-sidenav class="mat-elevation-z8">
             <!-- <img class="avatar mat-elevation-z8" src="https://source.unsplash.com/c_GmwfHBDzk/200x200" /> -->
-            <img class="avatar mat-elevation-z8" src="../../../assets/user1.jpg" />
+            <img class="avatar mat-elevation-z8" src="../../../assets/user2.jpg" />
 
             <h4 class="name">Nirav Joshi</h4>
             <p class="designation">Software Engineer</p>
@@ -20,9 +20,9 @@
                 <mat-icon>person</mat-icon>
                 <span>Employee</span>
             </button>
-            <button mat-button class="menu-button">
+            <button mat-button class="menu-button" [routerLink]="'/Home/category'">
                 <mat-icon>info</mat-icon>
-                <span>About</span>
+                <span>Catagory</span>
             </button>
     
             <mat-divider></mat-divider>

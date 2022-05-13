@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CatagoryComponent } from 'src/app/components/catagory/catagory.component';
 import { DashboardComponent } from 'src/app/components/dashboard/dashboard.component';
 import { EmployeeListComponent } from 'src/app/components/employee-list/employee-list.component';
 import { EmployeeComponent } from 'src/app/components/employee/employee.component';
@@ -17,7 +18,10 @@ const routes: Routes = [
       },
       {
         path:'employee/create',component:EmployeeComponent
-      }
+      },
+      {
+        path:'category',component:CatagoryComponent
+      },
     ]
   }
 ];

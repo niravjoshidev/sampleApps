@@ -72,7 +72,8 @@
               "browserTarget": "sampleApp:build:production"
             },
             "development": {
-              "browserTarget": "sampleApp:build:development"
+              "browserTarget": "sampleApp:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"

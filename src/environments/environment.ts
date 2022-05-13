@@ -12,7 +12,9 @@ export const environment = {
     storageBucket: "new-firebase-ng-app.appspot.com",
     messagingSenderId: "667544034057",
     appId: "1:667544034057:web:304e60a88b152a4b1591d8"
-  }
+  },
+  Pexel_Base_Url:'https://api.pexels.com/v1/',
+  Pexel_API_Key:'563492ad6f91700001000001ac7427a0323d4e338d249835a397a0f7'
 };
 
 /*

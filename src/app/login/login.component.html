@@ -3,10 +3,10 @@
       <mat-toolbar color="primary">Login Page</mat-toolbar>
         <form fxLayoutAlign="stretch" fxLayout="column" class="login-form" [formGroup]="loginForm">
             <mat-form-field>
-              <input matInput formControlName="userName" placeholder="Username"> 
+              <input matInput formControlName="userName" placeholder="Username" autocomplete="off"> 
             </mat-form-field>
             <mat-form-field>
-                <input matInput formControlName="password" type="password" placeholder="Password">
+                <input matInput formControlName="password" type="password" placeholder="Password" autocomplete="off">
               </mat-form-field>
               <button mat-raised-button (click)="ValidateUser()">Login</button>
           </form>

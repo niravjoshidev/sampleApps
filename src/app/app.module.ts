@@ -40,6 +40,7 @@ import { ConfirmDialogComponent } from './components/common/confirm-dialog/confi
 import { EmployeeComponent } from './components/employee/employee.component';
 import { EmployeeListComponent } from './components/employee-list/employee-list.component';
 import { environment } from 'src/environments/environment';
+import { CatagoryComponent } from './components/catagory/catagory.component';
 
 
 @NgModule({
@@ -53,6 +54,7 @@ import { environment } from 'src/environments/environment';
     ConfirmDialogComponent,
     EmployeeComponent,
     EmployeeListComponent,
+    CatagoryComponent,
   ],
   imports: [
     BrowserModule,
